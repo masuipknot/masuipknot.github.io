@@ -8,6 +8,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <style type="text/css">
+@keyframes reveal {
+	0% {
+		clip-path: inset(0 100% 0 0);
+		visibility: visible;
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+		visibility: visible;
+	}
+}
+html{
+
+	min-height: 100vh;
+	margin: 0;
+
+}
 body {
 	font-family: "Vollkorn", serif;
 	font-weight: 400;
@@ -16,6 +32,10 @@ body {
 	color: #001e43;
 	background-color: #edf1f4;
 	padding: 18px 24px;
+	background-image: url("img/background.jpg");
+	background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
 }
 h1 {
 	font-weight: normal;
@@ -32,7 +52,7 @@ ul {
 li a {
 	display: inline-block;
 }
-li:before {
+li a:before {
 	content: "- ";
 }
 @media (max-width:768px){
@@ -49,41 +69,34 @@ a {
 h1 {
 	animation: reveal 0.8s ease forwards;
 }
-li {
-	
-}
-li:nth-child(1) {
+li:nth-child(1) a {
 	animation-delay: 0.2s;
 }
-li:nth-child(2) {
+li:nth-child(2) a {
 	animation-delay: 0.4s;
 }
-li:nth-child(3) {
-	animation-delay: 0.7s;
+li:nth-child(3) a {
+	animation-delay: 0.55s;
 }
-li:nth-child(4) {
-	animation-delay: 1s;
+li:nth-child(4) a {
+	animation-delay: 0.63s;
+}
+li:nth-child(5) a {
+	animation-delay: 0.80s;
 }
 h1{
 	clip-path: inset(0 100% 0 0);
 	visibility: hidden;
 	animation: reveal 0.8s ease forwards;
+	background-color: #fff;
 }
-li {
+li a {
 	clip-path: inset(0 100% 0 0);
 	visibility: hidden;
-	animation: reveal 2.4s ease forwards;
+	animation: reveal 0.8s ease forwards;
+	background-color: #fff;
 }
-@keyframes reveal {
-	0% {
-		clip-path: inset(0 100% 0 0);
-		visibility: visible;
-	}
-	100% {
-		clip-path: inset(0 0 0 0);
-		visibility: visible;
-	}
-}
+
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22737929-1"></script>
 <script>
@@ -97,8 +110,9 @@ li {
 <h1>MASUI Kentaro</h1>
 <ul>
 		<li><a href="https://www.facebook.com/masui.kentaro">Facebook</a></li>
+		<li><a href="https://github.com/masuipknot">GitHub</a></li>
 		<li><a href="https://www.instagram.com/masuipknot/">Instagram</a></li>
-		<li><a href="https://twitter.com/masuipknot">Twitter (inactive)</a></li>
+		<li><a href="https://x.com/masuipknot">Twitter</a></li>
 		<li><a href="https://open.spotify.com/user/31ff791gmqwajuojs2tn2bt4i/playlists">Spotify Playlists</a></li>
 </ul>
 </body>
