@@ -19,10 +19,8 @@
 	}
 }
 html{
-
 	min-height: 100vh;
 	margin: 0;
-
 }
 body {
 	opacity: 0;
@@ -42,9 +40,7 @@ body {
 	*/
 }
 body.loaded {
-
 	opacity: 1;
-
 }
 h1 {
 	font-weight: normal;
@@ -78,21 +74,11 @@ a {
 h1 {
 	animation: reveal 0.8s ease forwards;
 }
-li:nth-child(1) a {
-	animation-delay: 0.2s;
-}
-li:nth-child(2) a {
-	animation-delay: 0.4s;
-}
-li:nth-child(3) a {
-	animation-delay: 0.55s;
-}
-li:nth-child(4) a {
-	animation-delay: 0.63s;
-}
-li:nth-child(5) a {
-	animation-delay: 0.80s;
-}
+li:nth-child(1) a { animation-delay: 0.2s; }
+li:nth-child(2) a { animation-delay: 0.4s; }
+li:nth-child(3) a { animation-delay: 0.55s; }
+li:nth-child(4) a { animation-delay: 0.63s; }
+li:nth-child(5) a { animation-delay: 0.80s; }
 h1{
 	clip-path: inset(0 100% 0 0);
 	visibility: hidden;
@@ -105,12 +91,9 @@ li a {
 	animation: reveal 0.8s ease forwards;
 	background-color: #fff;
 }
-
 </style>
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
-
 	const img = new Image();
 	img.onload = () => {
 		document.body.style.backgroundImage = 'url("img/background.jpg")';
@@ -120,9 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.body.classList.add('loaded');
 	};
 	img.src = 'img/background.jpg';
-
 });
-
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22737929-1"></script>
 <script>
