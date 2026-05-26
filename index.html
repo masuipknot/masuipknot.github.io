@@ -25,6 +25,8 @@ html{
 
 }
 body {
+	opacity: 0;
+	transition: opacity 0.3s ease;
 	font-family: "Vollkorn", serif;
 	font-weight: 400;
 	font-style: normal;
@@ -32,10 +34,17 @@ body {
 	color: #001e43;
 	background-color: #edf1f4;
 	padding: 18px 24px;
+	/*
 	background-image: url("img/background.jpg");
 	background-size: cover;
     background-position:center center;
     background-repeat: no-repeat;
+	*/
+}
+body.loaded {
+
+	opacity: 1;
+
 }
 h1 {
 	font-weight: normal;
@@ -98,6 +107,23 @@ li a {
 }
 
 </style>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	const img = new Image();
+	img.onload = () => {
+		document.body.style.backgroundImage = 'url("img/background.jpg")';
+		document.body.style.backgroundSize = 'cover';
+		document.body.style.backgroundPosition = 'center center';
+		document.body.style.backgroundRepeat = 'no-repeat';
+		document.body.classList.add('loaded');
+	};
+	img.src = 'img/background.jpg';
+
+});
+
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22737929-1"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
